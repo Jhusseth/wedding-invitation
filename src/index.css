@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+:root {
+  --gold-50: #fefdf8;
+  --gold-100: #fdf9e7;
+  --gold-200: #faf0c4;
+  --gold-300: #f6e397;
+  --gold-400: #f0d968;
+  --gold-500: #e6c547;
+  --gold-600: #D4AF37;  /* Tu color original */
+  --gold-700: #b8941f;  /* Para hover */
+  --gold-800: #967617;
+  --gold-900: #7a5f0f;
+  
+  --cream-bg: #f8f5f0;
+  --white-transparent: rgba(255, 255, 255, 0.9);
+  --shadow-gold: 0 4px 6px -1px rgba(212, 175, 55, 0.1), 0 2px 4px -1px rgba(212, 175, 55, 0.06);
+  --shadow-gold-lg: 0 10px 15px -3px rgba(212, 175, 55, 0.1), 0 4px 6px -2px rgba(212, 175, 55, 0.05);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+body {
+  background-color: var(--cream-bg);
+  font-family: "Playfair Display", serif;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.bg-gold { background-color: var(--gold-600); }
+.bg-gold-500 { background-color: var(--gold-500); }
+.bg-gold-600 { background-color: var(--gold-600); }
+.bg-gold-700 { background-color: var(--gold-700); }
+
+.text-gold { color: var(--gold-600); }
+.text-gold-600 { color: var(--gold-600); }
+.text-gold-700 { color: var(--gold-700); }
+
+.border-gold { border-color: var(--gold-600); }
+.border-gold-500 { border-color: var(--gold-500); }
+
+.font-script {
+  font-family: "Great Vibes", "Dancing Script", cursive;
+}
+
+.wedding-background {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cream-bg);
+  background-image: url('https://png.pngtree.com/png-clipart/20211116/original/pngtree-elegant-classic-flower-gold-square-frame-png-paper-cut-style-png-image_6938289.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 51% auto; 
+  background-attachment: scroll;
+}
+
+@media (max-width: 768px) {
+  .wedding-background {
+    background-attachment: scroll;
+  }
+}
+.decorative-flower {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.flower-top-left {
+  top: -20px;
+  left: -20px;
+  width: 200px;
+  height: 200px;
+}
+
+.flower-bottom-right {
+  bottom: -20px;
+  right: -20px;
+  width: 200px;
+  height: 200px;
+  transform: rotate(12deg);
+}
+
+.wedding-card {
+  background-color: var(--white-transparent);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  box-shadow: var(--shadow-gold-lg);
+  max-width: 28rem;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.btn-gold {
+  background: linear-gradient(to right, var(--gold-500), #eab308);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-gold:hover {
+  background: linear-gradient(to right, var(--gold-600), #ca8a04);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .decorative-flower {
+    width: 120px;
+    height: 120px;
+  }
+   .wedding-background {
+    background-size: 200% auto; 
+  }
+}
+
+@media (min-width: 900px) {
+  .decorative-flower {
+    width: 240px;
+    height: 240px;
+  }
+  .wedding-background {
+    background-size: 100% auto; 
+  }
+}
+
+@media (min-width: 1366px) {
+  .wedding-background {
+    background-size: 60% auto; 
+  }
+}
+
+@media (min-width: 1700px) {
+  .wedding-background {
+    background-size: 50% auto; 
+  }
+}
