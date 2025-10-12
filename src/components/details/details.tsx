@@ -25,15 +25,13 @@ export default function Details({ event, couple }: LocationProps) {
         <Calendar size={18} /> Detalles del evento
       </h3>
       <p className="text-sm text-gray-600 mb-3">
-        Ceremonia religiosa seguida de la recepción. <br /> Por favor llegar 15
-        minutos antes.
+        Ceremonia religiosa seguida de la recepción.
       </p>
       <div className="bg-gray-50 border-l-4 border-gold py-3 px-4 rounded-lg text-sm mb-4">
-        <strong>Código de vestimenta:</strong> Formal / Elegante
+        <strong>Código de vestimenta:</strong> Etiqueta formal
       </div>
       <div className="bg-blue-50 border-l-4 border-blue-400 py-3 px-4 rounded-lg text-sm mb-4">
-        <strong>Nota:</strong> Traer ropa de baño para disfrutar de la
-        piscina después de la recepción.
+        <strong>Importante:</strong> Se sugiere llevar traje de baño para disfrutar de la piscina tras la recepción.
       </div>
       <button
         onClick={addCalendar}

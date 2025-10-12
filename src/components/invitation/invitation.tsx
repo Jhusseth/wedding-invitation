@@ -14,7 +14,7 @@ export default function Invitation({ event, couple, contact }: LocationProps) {
 
   return (
     <div>
-      <h3 className="text-lg text-gold mb-2">Confirma tu asistencia</h3>
+      <h3 className="text-lg text-gold mb-2">Confirma asistencia</h3>
       <p className="text-gray-600 mb-4">
         Nos encantará contar contigo en este día tan especial.
       </p>
