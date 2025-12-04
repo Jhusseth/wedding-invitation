@@ -8,7 +8,7 @@ interface LocationProps {
 
 export default function Details({ event, couple }: LocationProps) {
   const addCalendar = () => {
-    const fecha = "20251227T140000/20251227T220000";
+    const fecha = "20251227T160000/20251227T220000";
     const titulo = `Boda ${couple.firstName} y ${couple.secondName}`;
     const ubicacion = `${event.venue}, ${event.address}`;
     const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(
